@@ -1,0 +1,30 @@
+@media (max-width: 760px) {
+  .site-header {
+    padding: 22px;
+    display: block;
+  }
+
+  .site-header h1 {
+    margin-bottom: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .auth-page {
+    width: 94%;
+    margin-top: 22px;
+  }
+
+  .auth-intro,
+  .auth-card {
+    padding: 18px;
+  }
+
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+}

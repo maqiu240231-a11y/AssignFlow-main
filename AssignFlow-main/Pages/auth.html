@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register | AssignFlow</title>
+
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+    <link rel="stylesheet" href="../CSS/forms.css" />
+    <link rel="stylesheet" href="../CSS/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>AssignFlow</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="auth.html">Login</a>
+        <a href="dashboard.html">Tasks</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-intro">
+        <h2>Welcome to AssignFlow</h2>
+        <p>
+          Login or create an account to manage your student tasks,
+          assignments, and project deadlines in one organized place.
+        </p>
+      </section>
+
+      <section class="auth-container">
+        <article class="auth-card">
+          <h2>Login</h2>
+
+          <!-- Use case: Student Login -->
+          <form id="login-form">
+            <fieldset>
+              <legend>Student Login</legend>
+              <label for="login-email">Email Address</label>
+              <input
+                type="email"
+                id="login-email"
+                name="login-email"
+                placeholder="Johndoe123@gmail.com"
+                required
+              />
+
+              <label for="login-password">Password</label>
+              <input
+                type="password"
+                id="login-password"
+                name="login-password"
+                placeholder="Enter your password"
+                required
+              />
+
+              <label class="checkbox-row">
+                <input type="checkbox" id="remember-me" name="remember" />
+                Remember me
+              </label>
+
+              <p id="login-message" class="form-message"></p>
+
+              <button type="submit">Login</button>
+            </fieldset>
+          </form>
+        </article>
+
+        <article class="auth-card">
+          <h2>Register</h2>
+
+          <!-- Use case: Student Registration -->
+          <form id="register-form">
+            <fieldset>
+              <legend>Create Your Student Account</legend>
+
+              <label for="fullname">Full name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Please enter your full name"
+                required
+              />
+
+              <label for="register-email">Email Address</label>
+              <input
+                type="email"
+                id="register-email"
+                name="register-email"
+                placeholder="Johndoe123@gmail.com"
+                required
+              />
+
+              <label for="study-level">Study Level</label>
+              <select name="study-level" id="study-level">
+                <option value="">Choose your level</option>
+                <option value="first-year">First Year</option>
+                <option value="second-year">Second Year</option>
+                <option value="third-year">Third Year</option>
+                <option value="fourth-year">Fourth Year</option>
+              </select>
+
+              <p class="form-label">Account type</p>
+              <label class="radio-row">
+                <input
+                  type="radio"
+                  name="account-type"
+                  value="student"
+                  checked
+                />
+                Student
+              </label>
+
+              <label class="radio-row">
+                <input type="radio" name="account-type" value="team-leader" />
+                Team Leader
+              </label>
+
+              <label for="register-password">Password</label>
+              <input
+                type="password"
+                id="register-password"
+                name="register-password"
+                placeholder="Create a password"
+                required
+              />
+
+              <p id="register-message" class="form-message"></p>
+
+              <button type="submit">Create Account</button>
+            </fieldset>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <small>&copy; 2026 AssignFlow. Student Task Management System.</small>
+      </p>
+    </footer>
+
+    <script src="../JS/auth.js"></script>
+  </body>
+</html>

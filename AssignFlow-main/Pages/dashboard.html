@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks | AssignFlow</title>
+
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+    <link rel="stylesheet" href="../CSS/forms.css" />
+    <link rel="stylesheet" href="../CSS/tasks.css" />
+    <link rel="stylesheet" href="../CSS/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>AssignFlow</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="dashboard.html">Tasks</a>
+        <a href="#" id="logout-link">Logout</a>
+      </nav>
+    </header>
+
+    <main class="tasks-page">
+      <section class="welcome-banner">
+        <h2 id="welcome-message">Welcome back!</h2>
+        <p>Here is everything you need to get done.</p>
+      </section>
+
+      <section class="add-task-card">
+        <h2>Add a New Task</h2>
+
+        <!-- Use case: Add Task -->
+        <form id="add-task-form">
+          <fieldset>
+            <legend>Task Details</legend>
+
+            <label for="task-title">Task Title</label>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="e.g. Finish Database assignment"
+              required
+            />
+
+            <label for="task-due">Due Date</label>
+            <input type="date" id="task-due" />
+
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="tasks-list-card">
+        <div class="tasks-list-header">
+          <h2>My Tasks</h2>
+
+          <!-- Use case: Filter Tasks -->
+          <select id="filter-select">
+            <option value="all">All Tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <ul id="task-list" class="task-list">
+          <!-- tasks get added here by JS -->
+        </ul>
+
+        <p id="empty-message" class="empty-message">
+          You don't have any tasks yet. Add one above to get started.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <small>&copy; 2026 AssignFlow. Student Task Management System.</small>
+      </p>
+    </footer>
+
+    <script src="../JS/dashboard.js"></script>
+  </body>
+</html>
