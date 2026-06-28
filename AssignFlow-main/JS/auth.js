@@ -66,7 +66,7 @@ if (registerForm) {
   });
 }
 
-// Use case: Student Login
+
 var loginForm = document.getElementById("login-form");
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
